@@ -32,9 +32,9 @@ local menu        = "rofi -show drun"
 -- Or execute your favorite apps at launch like this:
 --
 hl.on("hyprland.start", function()
-  --   hl.exec_cmd(terminal)
-  --   hl.exec_cmd("nm-applet")
   hl.exec_cmd("swaybg -i ~/nixos-dotfiles/assets/lighthouse.jpg -m stretch")
+  hl.exec_cmd("ashell")
+  --   hl.exec_cmd("nm-applet")
 end)
 
 

@@ -68,6 +68,7 @@
     ptyxis
     swaybg
     rofi
+    ashell
   ];
 
   environment.shells = [pkgs.nushell];

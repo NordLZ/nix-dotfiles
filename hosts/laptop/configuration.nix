@@ -84,6 +84,7 @@
     alacritty
     ptyxis
     swaybg
+    ashell
   ];
 
   environment.shells = [pkgs.nushell];
