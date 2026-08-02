@@ -4,6 +4,7 @@
   configs = {
     nvim = "nvim";
     hypr = "hypr";
+    ashell = "ashell";
   };
 in {
   xdg.configFile =
