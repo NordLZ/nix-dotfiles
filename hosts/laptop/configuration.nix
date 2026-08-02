@@ -84,7 +84,6 @@
     alacritty
     ptyxis
     hyprpaper
-    gh
   ];
 
   environment.shells = [pkgs.nushell];

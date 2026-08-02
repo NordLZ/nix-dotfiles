@@ -19,9 +19,13 @@
         email = "adam.nord04@gmail.com";
       };
     };
-    # configExtra = {
-    #   init.defaultBranch = "main";
-    # };
+  };
+
+  programs.gh = {
+    enable = true;
+    gitCredentialHelper = {
+      enable = true;
+    };
   };
 
   programs.bash = {
