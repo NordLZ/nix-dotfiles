@@ -5,6 +5,7 @@
     nvim = "nvim";
     hypr = "hypr";
     ashell = "ashell";
+    alacritty = "alacritty";
   };
 in {
   xdg.configFile =
