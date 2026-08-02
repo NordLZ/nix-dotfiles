@@ -9,6 +9,7 @@
     ./gnome.nix
     ./neovim.nix
     ./firefox.nix
+    ./hypr.nix
   ];
 
   programs.git = {
