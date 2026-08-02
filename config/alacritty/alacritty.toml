@@ -1,2 +1,8 @@
 [general]
 import = ["./nordic.toml"]
+
+[window]
+padding = { x = 15, y = 15 }
+decorations = "None"
+opacity = 0.8
+
