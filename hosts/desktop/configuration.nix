@@ -67,6 +67,7 @@
     alacritty
     ptyxis
     hyprpaper
+    rofi
   ];
 
   environment.shells = [pkgs.nushell];
