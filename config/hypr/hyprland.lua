@@ -17,7 +17,7 @@ hl.monitor({
 
 -- Set programs that you use
 local mainMod     = "SUPER" -- Sets "Windows" key as main modifier
-local terminal    = "kitty"
+local terminal    = "alacritty"
 local fileManager = "nautilus"
 local menu        = "rofi -show drun"
 
@@ -57,7 +57,7 @@ hl.config({
     layout      = "master",
     gaps_in     = 2,
     gaps_out    = 4,
-    border_size = 1,
+    border_size = 2,
     col         = {
       active_border   = "rgba(888888ff)",
       inactive_border = "rgba(333333aa)",
