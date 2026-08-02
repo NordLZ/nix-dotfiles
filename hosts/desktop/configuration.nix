@@ -66,7 +66,7 @@
     foot
     alacritty
     ptyxis
-    hyprpaper
+    swaybg
     rofi
   ];
 

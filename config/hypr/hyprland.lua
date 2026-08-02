@@ -31,11 +31,11 @@ local menu        = "rofi -show drun"
 -- Autostart necessary processes (like notifications daemons, status bars, etc.)
 -- Or execute your favorite apps at launch like this:
 --
--- hl.on("hyprland.start", function ()
---   hl.exec_cmd(terminal)
---   hl.exec_cmd("nm-applet")
---   hl.exec_cmd("waybar & hyprpaper & firefox")
--- end)
+hl.on("hyprland.start", function()
+  --   hl.exec_cmd(terminal)
+  --   hl.exec_cmd("nm-applet")
+  hl.exec_cmd("swaybg -i ~/nixos-dotfiles/assets/lighthouse.jpg -m stretch")
+end)
 
 
 -------------------------------
@@ -44,8 +44,8 @@ local menu        = "rofi -show drun"
 
 -- See https://wiki.hypr.land/Configuring/Advanced-and-Cool/Environment-variables/
 
-hl.env("XCURSOR_SIZE", "12")
-hl.env("HYPRCURSOR_SIZE", "12")
+hl.env("XCURSOR_THEME", "macOS")
+hl.env("XCURSOR_SIZE", "24")
 
 
 -----------------------
@@ -74,32 +74,11 @@ hl.config({
       enabled = false,
     },
   },
-  master = {
-    new_status = "master",
-  },
 
   animations = {
     enabled = false,
   },
 
-})
-
--- Ref https://wiki.hypr.land/Configuring/Basics/Workspace-Rules/
--- "Smart gaps" / "No gaps when only"
--- uncomment all if you wish to use that.
-hl.workspace_rule({ workspace = "w[tv1]", gaps_out = 0, gaps_in = 0 })
-hl.workspace_rule({ workspace = "f[1]", gaps_out = 0, gaps_in = 0 })
-hl.window_rule({
-  name        = "no-gaps-wtv1",
-  match       = { float = false, workspace = "w[tv1]" },
-  border_size = 0,
-  rounding    = 0,
-})
-hl.window_rule({
-  name        = "no-gaps-f1",
-  match       = { float = false, workspace = "f[1]" },
-  border_size = 0,
-  rounding    = 0,
 })
 
 ----------------
@@ -135,6 +114,9 @@ hl.gesture({
   action = "workspace"
 })
 
+-- assign apps to workspaces
+hl.window_rule({ match = { class = "^(kitty)$" }, workspace = "1" })
+hl.window_rule({ match = { class = "^(firefox)$" }, workspace = "3" })
 
 ---------------------
 ---- KEYBINDINGS ----
@@ -194,19 +176,6 @@ hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true 
 ---- WINDOWS AND WORKSPACES ----
 --------------------------------
 
--- See https://wiki.hypr.land/Configuring/Basics/Window-Rules/
--- and https://wiki.hypr.land/Configuring/Basics/Workspace-Rules/
-
--- Example window rules that are useful
-
-local suppressMaximizeRule = hl.window_rule({
-  -- Ignore maximize requests from all apps. You'll probably like this.
-  name           = "suppress-maximize-events",
-  match          = { class = ".*" },
-
-  suppress_event = "maximize",
-})
--- suppressMaximizeRule:set_enabled(false)
 
 hl.window_rule({
   -- Fix some dragging issues with XWayland
@@ -221,21 +190,4 @@ hl.window_rule({
   },
 
   no_focus = true,
-})
-
--- Layer rules also return a handle.
--- local overlayLayerRule = hl.layer_rule({
---     name  = "no-anim-overlay",
---     match = { namespace = "^my-overlay$" },
---     no_anim = true,
--- })
--- overlayLayerRule:set_enabled(false)
-
--- Hyprland-run windowrule
-hl.window_rule({
-  name  = "move-hyprland-run",
-  match = { class = "hyprland-run" },
-
-  move  = "20 monitor_h-120",
-  float = true,
 })

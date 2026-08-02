@@ -83,7 +83,7 @@
     foot
     alacritty
     ptyxis
-    hyprpaper
+    swaybg
   ];
 
   environment.shells = [pkgs.nushell];
