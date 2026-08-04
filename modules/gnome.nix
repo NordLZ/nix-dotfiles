@@ -5,7 +5,7 @@
   ...
 }: let
   # Interpolate the nix store path directly into a file:// URI
-  wallpaperUri = "file://${../assets/wall.jpg}";
+  wallpaperUri = "file://${../assets/lighthouse.jpg}";
 in {
   dconf.settings = {
     "org/gnome/shell" = {

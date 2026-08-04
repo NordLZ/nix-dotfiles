@@ -85,6 +85,7 @@
     ptyxis
     swaybg
     ashell
+    libheif # heif-convert
   ];
 
   environment.shells = [pkgs.nushell];
