@@ -39,23 +39,23 @@ in {
     };
 
     "org/gnome/desktop/input-sources" = {
-      sources = [(mkTuple ["xkb" "us"]) (mkTuple ["xkb" "se"]) ];
-      xkb-options = [ ];
+      sources = [(mkTuple ["xkb" "us"]) (mkTuple ["xkb" "se"])];
+      xkb-options = [];
     };
 
     "org/gnome/desktop/session" = {
       idle-delay = 900; # in seconds. 900s is 15 mins
     };
 
-    #
-    # Workspaces
-    #
-
     "org/gnome/mutter" = {
       dynamic-workspaces = false;
     };
     "org/gnome/desktop/wm/preferences" = {
       num-workspaces = 5;
+    };
+
+    "org.gnome.shell.window-switcher" = {
+      current-workspace-only = false;
     };
 
     #
@@ -100,6 +100,8 @@ in {
     "org/gnome/desktop/wm/keybindings" = {
       # Close window (Super + Q)
       close = ["<Super>q"];
+      switch-applications = ["<Alt>Tab"];
+      switch-applications-backward = ["<Shift><Alt>Tab"];
 
       # TODO: for loop
       # Switch to workspaces 1 - 10
