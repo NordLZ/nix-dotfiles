@@ -6,7 +6,14 @@ return {
   },
   config = function()
     local builtin = require('telescope.builtin')
-    vim.keymap.set('n', '<leader><leader>', builtin.git_files, { desc = 'Telescope find git files' })
+    vim.keymap.set('n', '<leader><leader>', function()
+      local is_inside_git = vim.fn.isdirectory(".git") == 1
+      if is_inside_git then
+        require("telescope.builtin").git_files()
+      else
+        require("telescope.builtin").find_files()
+      end
+    end, { desc = 'Telescope find git files' })
     vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
     vim.keymap.set('n', '<leader>fd', function()
       builtin.find_files({ cwd = '~/.nixos-dotfiles/' })
