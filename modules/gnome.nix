@@ -8,6 +8,11 @@
   wallpaperUri = "file://${../assets/lighthouse.jpg}";
 in {
   dconf.settings = {
+    
+    #
+    # Appearance
+    #
+
     "org/gnome/shell" = {
       favorite-apps = [
         "firefox.desktop"
@@ -16,16 +21,31 @@ in {
         "org.gnome.TextEditor.desktop"
       ];
     };
-    "org/gnome/desktop/interface" = {
-      enable-hot-corners = false;
-      color-scheme = "prefer-dark";
-      text-scaling-factor = 1.0;
-    };
+
     "org/gnome/desktop/background" = {
       picture-uri = wallpaperUri;
       picture-uri-dark = wallpaperUri;
       picture-options = "zoom";
     };
+
+    # 
+    #  Behaviour
+    #
+
+    "org/gnome/desktop/interface" = {
+      enable-hot-corners = false;
+      color-scheme = "prefer-dark";
+      text-scaling-factor = 1.0;
+    };
+
+    "/org/gnome/desktop/session" = {
+      idle-delay = 900; # in seconds. 900s is 15 mins
+    };
+
+    #
+    # Workspaces
+    #
+
     "org/gnome/mutter" = {
       dynamic-workspaces = false;
     };
@@ -33,7 +53,11 @@ in {
       num-workspaces = 5;
     };
 
-    # Some bullshit
+    #
+    # Keybindings
+    #
+
+    # TODO: make this a loop Create 2 custom keybinds
     "org/gnome/settings-daemon/plugins/media-keys" = {
       # Use lib.hm.gvariant.mkArray to explicitly tell dconf this is an array of strings
       custom-keybindings = lib.hm.gvariant.mkArray "s" [
@@ -54,6 +78,7 @@ in {
       binding = "<Super>b";
     };
 
+    # TODO: for loop
     "org/gnome/shell/keybindings" = {
       switch-to-application-1 = [];
       switch-to-application-2 = [];
@@ -71,6 +96,7 @@ in {
       # Close window (Super + Q)
       close = ["<Super>q"];
 
+      # TODO: for loop
       # Switch to workspaces 1 - 10
       switch-to-workspace-1 = ["<Super>1"];
       switch-to-workspace-2 = ["<Super>2"];
