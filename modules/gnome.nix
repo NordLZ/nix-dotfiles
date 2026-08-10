@@ -17,7 +17,7 @@ in {
       favorite-apps = [
         "firefox.desktop"
         "org.gnome.Nautilus.desktop"
-        "org.gnome.Ptyxis.desktop"
+        "org.gnome.Ghostty.desktop"
         "org.gnome.TextEditor.desktop"
       ];
     };
@@ -72,8 +72,8 @@ in {
     };
 
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
-      name = "Ptyxis Terminal";
-      command = "ptyxis --new-window";
+      name = "Terminal";
+      command = "ghostty";
       binding = "<Super>Return";
     };
 
