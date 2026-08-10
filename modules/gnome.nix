@@ -6,6 +6,7 @@
 }: let
   # Interpolate the nix store path directly into a file:// URI
   wallpaperUri = "file://${../assets/lighthouse.jpg}";
+  inherit (lib.hm.gvariant) mkTuple;
 in {
   dconf.settings = {
     #
@@ -35,6 +36,11 @@ in {
       enable-hot-corners = false;
       color-scheme = "prefer-dark";
       text-scaling-factor = 1.0;
+    };
+
+    "org/gnome/desktop/input-sources" = {
+      sources = [(mkTuple ["xkb" "us"]) (mkTuple ["xkb" "se"]) ];
+      xkb-options = [ ];
     };
 
     "org/gnome/desktop/session" = {
