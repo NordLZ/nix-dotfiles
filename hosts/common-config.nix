@@ -54,8 +54,6 @@
     wget
     git
     gnumake
-    kitty
-    foot
     alacritty
     ptyxis
     swaybg

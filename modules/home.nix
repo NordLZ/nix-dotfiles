@@ -81,5 +81,6 @@
     tree
     tldr
     fd
+    lazygit
   ];
 }
