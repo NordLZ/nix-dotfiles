@@ -77,10 +77,14 @@
     spotify
     vscodium
     obsidian
+    wmenu
+    noctalia
+    ghostty
 
     tree
     tldr
     fd
     lazygit
+    libheif # for heif-convert
   ];
 }
