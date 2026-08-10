@@ -30,6 +30,13 @@ in {
       rebuild = "sudo nixos-rebuild switch --flake ~/.nixos-dotfiles";
       gs = "git status";
       lg = "lazygit";
+      d = "edit-dotfiles";
     };
+    extraConfig = ''
+      def --env edit-dotfiles [] {
+        cd ~/.nixos-dotfiles
+        nvim .
+      }
+    '';
   };
 }
