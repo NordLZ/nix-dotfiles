@@ -21,14 +21,13 @@ in {
       abbreviations =
         generatedAbbrs
         // {
-          update = "nix flake update";
-          rebuild = "sudo nixos-rebuild switch --flake ~/nixos-dotfiles";
+          nix-update = "nix flake update";
         };
     };
     shellAliases = {
       kys = "poweroff";
       v = "nvim";
-      cdot = "cd ~/nixos-dotfiles/";
+      rebuild = "sudo nixos-rebuild switch --flake ~/.nixos-dotfiles";
     };
   };
 }
