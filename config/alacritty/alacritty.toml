@@ -1,5 +1,5 @@
 [general]
-import = ["./nordic.toml"]
+import = ["~/.config/alacritty/themes/noctalia.toml"]
 
 [window]
 padding = { x = 15, y = 15 }

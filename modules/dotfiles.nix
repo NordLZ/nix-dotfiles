@@ -3,9 +3,8 @@
   create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;
   configs = {
     nvim = "nvim";
-    hypr = "hypr";
-    ashell = "ashell";
     alacritty = "alacritty";
+    mango = "mango";
   };
 in {
   xdg.configFile =
