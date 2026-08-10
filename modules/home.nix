@@ -76,6 +76,7 @@
     anki
     spotify
     vscodium
+    obsidian
 
     tree
     tldr

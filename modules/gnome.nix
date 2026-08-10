@@ -8,7 +8,6 @@
   wallpaperUri = "file://${../assets/lighthouse.jpg}";
 in {
   dconf.settings = {
-    
     #
     # Appearance
     #
@@ -28,7 +27,7 @@ in {
       picture-options = "zoom";
     };
 
-    # 
+    #
     #  Behaviour
     #
 
@@ -38,7 +37,7 @@ in {
       text-scaling-factor = 1.0;
     };
 
-    "/org/gnome/desktop/session" = {
+    "org/gnome/desktop/session" = {
       idle-delay = 900; # in seconds. 900s is 15 mins
     };
 
