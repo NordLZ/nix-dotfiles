@@ -21,6 +21,11 @@
   networking.wireless.enable = true;
   networking.networkmanager.enable = true;
 
+  # noctalia
+  hardware.bluetooth.enable = true;
+  services.power-profiles-daemon.enable = true;
+  services.upower.enable = true;
+
   # Set your time zone.
   time.timeZone = "Europe/Stockholm";
 
@@ -37,10 +42,7 @@
 
   services.desktopManager.gnome.enable = true;
 
-  programs.hyprland = {
-    enable = true;
-    xwayland.enable = true;
-  };
+  programs.mango.enable = true;
 
   # TODO: maybe move to gnome module
   environment.gnome.excludePackages = with pkgs; [
@@ -84,8 +86,9 @@
     alacritty
     ptyxis
     swaybg
-    ashell
     libheif # heif-convert
+    wmenu
+    noctalia
   ];
 
   environment.shells = [pkgs.nushell];
