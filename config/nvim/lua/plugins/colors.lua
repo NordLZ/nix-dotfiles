@@ -3,13 +3,24 @@
 -- end
 
 return {
+  -- {
+  --   "AlexvZyl/nordic.nvim",
+  --   lazy = false,
+  --   priority = 1000,
+  --   config = function()
+  --     vim.cmd.colorscheme('nordic')
+  --   end
+  -- },
   {
-    "AlexvZyl/nordic.nvim",
+    "loctvl842/monokai-pro.nvim",
     lazy = false,
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme('nordic')
-    end
+      require("monokai-pro").setup({
+        transparent_background = false
+      })
+      vim.cmd.colorscheme("monokai-pro")
+    end,
   },
   {
     "nvim-lualine/lualine.nvim",
