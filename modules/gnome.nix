@@ -62,6 +62,11 @@ in {
     # Keybindings
     #
 
+    # Open settings
+    "org/gnome/settings-daemon/plugins/media-keys" = {
+      control-center = ["<Super>comma"];
+    };
+
     # TODO: make this a loop Create 2 custom keybinds
     "org/gnome/settings-daemon/plugins/media-keys" = {
       # Use lib.hm.gvariant.mkArray to explicitly tell dconf this is an array of strings
