@@ -22,13 +22,13 @@ in {
         generatedAbbrs
         // {
           nix-update = "nix flake update";
+          gs = "git status";
         };
     };
     shellAliases = {
       kys = "poweroff";
       v = "nvim";
       rebuild = "sudo nixos-rebuild switch --flake ~/.nixos-dotfiles";
-      gs = "git status";
       lg = "lazygit";
       d = "edit-dotfiles";
     };

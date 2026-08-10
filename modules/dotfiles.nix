@@ -5,6 +5,7 @@
     nvim = "nvim";
     alacritty = "alacritty";
     mango = "mango";
+    ghostty = "ghostty";
   };
 in {
   xdg.configFile =
