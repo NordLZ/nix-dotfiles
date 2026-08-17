@@ -15,7 +15,14 @@
 
   time.timeZone = "Europe/Stockholm";
 
-  services.displayManager.gdm.enable = true;
+  services.displayManager = {
+    gdm.enable = true;
+    autoLogin = {
+      enable = true;
+      user = "adam";
+    };
+    defaultSession = "gnome";
+  };
   services.desktopManager.gnome.enable = true;
 
   programs.mango.enable = true;
