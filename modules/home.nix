@@ -80,6 +80,7 @@
     wmenu
     noctalia
     ghostty
+    qbittorrent
 
     tree
     tldr
