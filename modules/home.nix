@@ -78,7 +78,6 @@
     vscodium
     obsidian
     wmenu
-    noctalia
     ghostty
     qbittorrent
 
