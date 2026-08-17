@@ -1,3 +1,4 @@
+-- rose-pine-moon
 return {
   'nvim-telescope/telescope.nvim',
   version = '*',
