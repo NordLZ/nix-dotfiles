@@ -107,6 +107,8 @@ in {
       close = ["<Super>q"];
       switch-applications = ["<Alt>Tab"];
       switch-applications-backward = ["<Shift><Alt>Tab"];
+      switch-to-workspace-right = ["<Super>bracketright"];
+      switch-to-workspace-left = ["<Super>bracketleft"];
 
       # TODO: for loop
       # Switch to workspaces 1 - 10
