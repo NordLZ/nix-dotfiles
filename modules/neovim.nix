@@ -10,5 +10,6 @@
     luaPackages.tree-sitter-cli
     lua-language-server
     alejandra
+    nixd
   ];
 }

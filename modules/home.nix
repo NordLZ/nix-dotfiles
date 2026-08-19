@@ -9,7 +9,6 @@
     ./gnome.nix
     ./neovim.nix
     ./firefox.nix
-    ./hypr.nix
   ];
 
   programs.git = {
@@ -80,11 +79,14 @@
     wmenu
     ghostty
     qbittorrent
+    zed-editor
+    calibre
 
     tree
     tldr
     fd
     lazygit
     libheif # for heif-convert
+    rust-analyzer
   ];
 }
