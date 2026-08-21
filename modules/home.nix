@@ -88,5 +88,8 @@
     lazygit
     libheif # for heif-convert
     rust-analyzer
+    btop
+    fastfetch
+    bitwarden-cli
   ];
 }
