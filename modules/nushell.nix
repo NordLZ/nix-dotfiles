@@ -22,15 +22,16 @@ in {
         generatedAbbrs
         // {
           nix-update = "nix flake update";
-          gs = "git status";
+          nix-rebuild = "sudo nixos-rebuild switch --flake ~/.nixos-dotfiles";
+          nix-test = "sudo nixos-rebuild test --flake ~/.nixos-dotfiles";
         };
     };
     shellAliases = {
       kys = "poweroff";
       v = "nvim";
-      rebuild = "sudo nixos-rebuild switch --flake ~/.nixos-dotfiles";
       lg = "lazygit";
       d = "edit-dotfiles";
+      gs = "git status";
     };
     extraConfig = ''
       def --env edit-dotfiles [] {
