@@ -81,6 +81,8 @@
     qbittorrent
     zed-editor
     calibre
+    czkawka
+    libreoffice
 
     tree
     tldr
